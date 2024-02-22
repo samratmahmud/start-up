@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("../fonts/inter/style.css");
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   @apply font-inter text-md text-gray-400 font-medium;
+}
+html {
+   scroll-behavior: smooth;
+}
