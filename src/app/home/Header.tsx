@@ -16,7 +16,7 @@ function Header() {
                <h1 className="text-4xl text-white/90 font-bold max-w-[800px] mx-auto text-center leading-[1.25] mb-5">
                   Free and Open-Source Next.js Template for Startup & SaaS
                </h1>
-               <p className="text-lg text-white/90 font-medium leading-[1.675] max-w-[800px] mx-auto text-center mb-12">
+               <p className="text-lg font-medium leading-[1.675] max-w-[800px] mx-auto text-center mb-12">
                   Startup is free Next.js template for startups and SaaS
                   business websites comes with all the essential pages,
                   components, and sections you need to launch a complete

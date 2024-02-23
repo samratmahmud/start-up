@@ -10,7 +10,7 @@
 }
 
 body {
-   @apply font-inter text-md text-gray-400 font-medium;
+   @apply font-inter text-md text-gray-400 font-medium leading-[1.625];
 }
 html {
    scroll-behavior: smooth;

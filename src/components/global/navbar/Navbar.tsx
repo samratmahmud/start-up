@@ -28,6 +28,7 @@ const navLink = [
 ];
 
 function Navbar() {
+   const [tab, setTab] = useState(0);
    const [visible, setVisible] = useState(false);
 
    useEffect(() => {
@@ -48,7 +49,7 @@ function Navbar() {
    return (
       <nav
          className={`fixed left-0 right-0 top-0 z-[1020] duration-300 ${
-            visible ? "bg-blue-950/60 backdrop-blur-sm py-2 shadow-sm" : "py-5"
+            visible ? "bg-blue-950/70 backdrop-blur-sm py-2 shadow-sm" : "py-5"
          }`}
       >
          <div className="container">
@@ -62,7 +63,12 @@ function Navbar() {
                         <Link
                            key={index}
                            href={path}
-                           className="text-white/90 hover:text-gray-400 duration-300 leading-[1.5]"
+                           onClick={() => setTab(index)}
+                           className={`duration-300 leading-[1.5] ${
+                              tab === index
+                                 ? "text-white/90"
+                                 : "text-gray-400 hover:text-white/90"
+                           }`}
                         >
                            {name}
                         </Link>
