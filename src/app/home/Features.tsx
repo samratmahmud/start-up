@@ -55,8 +55,8 @@ function Features() {
                </div>
                <div className="grid grid-cols-3 gap-x-8 gap-y-14">
                   {featuresCards.map(({icon, title, describtion}, index) => (
-                     <div key={index}>
-                        <div className="w-[70px] aspect-square p-4 bg-blue-200/15 rounded-md mb-10">
+                     <div key={index} className="group">
+                        <div className="w-[70px] aspect-square p-4 bg-blue-200/15 group-hover:bg-blue-200/40 duration-300 rounded-md mb-10">
                            <img src={icon} alt="" />
                         </div>
                         <h3 className="text-xl leading-[1.334em] font-bold text-white/90 mb-5">

@@ -1,4 +1,5 @@
 import type {Config} from "tailwindcss";
+import {fontFamily} from "tailwindcss/defaultTheme";
 
 const config: Config = {
    content: [
@@ -9,16 +10,18 @@ const config: Config = {
    theme: {
       extend: {
          colors: {
-            primary: "rgb(74 108 247 / 8)",
+            primary: "rgb(74 108 247)",
             gray: {
-               "400": "rgb(149 156 177 / 1)",
-               "500": "hsla(0,0%,100%,.2)",
+               "400": "rgb(149 156 177)",
+               "500": "hsla(0,0%,100%)",
+               "600": "rgb(29 36 48)",
+               "700": "rgb(23 28 40)",
                "950": "rgb(18 23 35 / 1)",
             },
             blue: {
                "200": "rgb(74 108 247)",
                "900": "rgb(9 14 52 / 1)",
-               "950": "rgb(30 35 46/ 1)",
+               "950": "rgb(30 35 46)",
             },
          },
       },
@@ -37,7 +40,7 @@ const config: Config = {
          sm: "0 1px 1px rgba(253, 253, 253, 0.15)",
       },
       fontFamily: {
-         inter: ["Inter", "sans-serif"],
+         inter: ["Inter", ...fontFamily.sans],
       },
       backgroundImage: {},
       container: {

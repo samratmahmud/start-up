@@ -17,7 +17,7 @@ function Buttons(props: buttonsProps) {
          className={`text-white font-semibold leading-[1.5em]  duration-300 rounded-md ${
             color === "blue"
                ? "bg-primary hover:bg-primary/80"
-               : "bg-gray-500 hover:bg-gray-500/30"
+               : "bg-gray-500/10 hover:bg-gray-500/5"
          } ${variant === "large" ? "py-4 px-8" : "py-3 px-9"}`}
       >
          {name}
