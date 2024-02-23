@@ -29,7 +29,6 @@ function Pricing() {
                </span>
                <label className={`w-11 h-6 relative cursor-pointer`}>
                   <input type="checkbox" className="sr-only peer " />
-
                   <div className="bg-primary/30 w-16 h-5 rounded-full peer-checked:bg-primary/70 duration-200" />
                   <div className="absolute -top-1.5 left-0 w-8 h-8 p-1.5 bg-primary rounded-full peer-checked:left-9 duration-200 shadow-3xl">
                      <div className="bg-white rounded-full w-full h-full" />
