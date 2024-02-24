@@ -171,8 +171,8 @@ function Pricing() {
                         <div className="absolute bottom-0 right-0">
                            <img src="/images/packages-card-bg.svg" alt="" />
                         </div>
-                        <div className="flex gap-4 justify-between items-center">
-                           <div className="text-5xl text-white font-bold">
+                        <div className="flex gap-4 justify-between items-center mb-1">
+                           <div className="text-5xl leading-[1.65m] text-white font-bold">
                               ${active ? priceY : priceM}
                               <span className="text-lg text-gray-300 font-medium">
                                  /{active ? "yr" : "mo"}
@@ -182,8 +182,8 @@ function Pricing() {
                               {packageN}
                            </div>
                         </div>
-                        <h2 className="mb-7">{title}</h2>
-                        <div className="w-full cursor-pointer duration-300 rounded py-[11px] px-9 bg-primary hover:bg-primary/80 flex justify-center mb-8">
+                        <h2 className="mb-7 leading-[1.5em]">{title}</h2>
+                        <div className="w-full cursor-pointer duration-300 rounded py-3 px-9 bg-primary hover:bg-primary/80 flex justify-center mb-8">
                            <Link
                               href={Path}
                               className="text-white font-semibold leading-[1.5em]"

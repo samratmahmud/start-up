@@ -7,6 +7,7 @@ import Support from "./home/Support";
 import Feadback from "./home/Feadback";
 import Pricing from "./home/Pricing";
 import Blogs from "./home/Blogs";
+import Contact from "./home/Contact";
 
 export default function Home() {
    return (
@@ -20,6 +21,7 @@ export default function Home() {
          <Feadback />
          <Pricing />
          <Blogs />
+         <Contact />
       </main>
    );
 }

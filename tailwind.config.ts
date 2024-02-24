@@ -40,7 +40,7 @@ const config: Config = {
       },
       boxShadow: {
          sm: "0 1px 1px rgba(253, 253, 253, 0.15)",
-         md: "0.5px 3px 12px rgba(120, 130, 147, 0.15)",
+         md: "0.5px 4px 12px rgba(120, 130, 147, 0.15)",
       },
       fontFamily: {
          inter: ["Inter", ...fontFamily.sans],
