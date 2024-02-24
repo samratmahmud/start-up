@@ -12,6 +12,7 @@ const config: Config = {
          colors: {
             primary: "rgb(74 108 247)",
             gray: {
+               "300": "rgb(120 130 147)",
                "400": "rgb(149 156 177)",
                "500": "hsla(0,0%,100%)",
                "600": "rgb(29 36 48)",
@@ -35,9 +36,11 @@ const config: Config = {
          "2xl": "30px",
          "3xl": "45px",
          "4xl": "48px",
+         "5xl": "32px",
       },
       boxShadow: {
          sm: "0 1px 1px rgba(253, 253, 253, 0.15)",
+         md: "0.5px 3px 12px rgba(120, 130, 147, 0.15)",
       },
       fontFamily: {
          inter: ["Inter", ...fontFamily.sans],

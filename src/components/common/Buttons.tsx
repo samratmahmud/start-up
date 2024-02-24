@@ -14,7 +14,7 @@ function Buttons(props: buttonsProps) {
    return (
       <Link
          href={path}
-         className={`text-white font-semibold leading-[1.5em]  duration-300 rounded-md ${
+         className={`text-white font-semibold leading-[1.5em]  duration-300 rounded ${
             color === "blue"
                ? "bg-primary hover:bg-primary/80"
                : "bg-gray-500/10 hover:bg-gray-500/5"

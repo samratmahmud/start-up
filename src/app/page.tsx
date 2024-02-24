@@ -6,6 +6,7 @@ import BusinessSites from "./home/BusinessSites";
 import Support from "./home/Support";
 import Feadback from "./home/Feadback";
 import Pricing from "./home/Pricing";
+import Blogs from "./home/Blogs";
 
 export default function Home() {
    return (
@@ -18,6 +19,7 @@ export default function Home() {
          <Support />
          <Feadback />
          <Pricing />
+         <Blogs />
       </main>
    );
 }

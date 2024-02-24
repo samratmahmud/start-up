@@ -1,7 +1,114 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import Buttons from "@/components/common/Buttons";
 import Title from "@/components/common/Title";
+import Link from "next/link";
 import React from "react";
+
+const packages = [
+   {
+      priceM: "40",
+      priceY: "120",
+      packageN: "Lite",
+      title: "Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim.",
+      btn: "Start Free Trial",
+      Path: "#",
+      benefit: [
+         {
+            name: "All UI Components",
+            icon: true,
+         },
+         {
+            name: "Use with Unlimited Projects",
+            icon: true,
+         },
+         {
+            name: "Commercial Use",
+            icon: true,
+         },
+         {
+            name: "Email Support",
+            icon: true,
+         },
+         {
+            name: "Lifetime Access",
+            icon: false,
+         },
+         {
+            name: "Free Lifetime Updates",
+            icon: false,
+         },
+      ],
+   },
+   {
+      priceM: "399",
+      priceY: "789",
+      packageN: "Basic",
+      title: "Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim.",
+      btn: "Start Free Trial",
+      Path: "#",
+      benefit: [
+         {
+            name: "All UI Components",
+            icon: true,
+         },
+         {
+            name: "Use with Unlimited Projects",
+            icon: true,
+         },
+         {
+            name: "Commercial Use",
+            icon: true,
+         },
+         {
+            name: "Email Support",
+            icon: true,
+         },
+         {
+            name: "Lifetime Access",
+            icon: true,
+         },
+         {
+            name: "Free Lifetime Updates",
+            icon: false,
+         },
+      ],
+   },
+   {
+      priceM: "589",
+      priceY: "999",
+      packageN: "Plus",
+      title: "Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim.",
+      btn: "Start Free Trial",
+      Path: "#",
+      benefit: [
+         {
+            name: "All UI Components",
+            icon: true,
+         },
+         {
+            name: "Use with Unlimited Projects",
+            icon: true,
+         },
+         {
+            name: "Commercial Use",
+            icon: true,
+         },
+         {
+            name: "Email Support",
+            icon: true,
+         },
+         {
+            name: "Lifetime Access",
+            icon: true,
+         },
+         {
+            name: "Free Lifetime Updates",
+            icon: true,
+         },
+      ],
+   },
+];
 
 function Pricing() {
    const [active, setActive] = React.useState(false);
@@ -18,30 +125,98 @@ function Pricing() {
                   describtion="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
                />
             </div>
-            <div className="flex gap-8 justify-center">
+            <div className="flex gap-5 justify-center items-center mb-16">
                <span
-                  onClick={() => setActive((prev) => !prev)}
-                  className={`font-semibold cursor-pointer ${
-                     active ? "text-primary" : "text-white"
+                  className={`font-semibold ${
+                     active ? "text-white" : "text-primary"
                   }`}
                >
                   Monthly
                </span>
-               <label className={`w-11 h-6 relative cursor-pointer`}>
-                  <input type="checkbox" className="sr-only peer " />
-                  <div className="bg-primary/30 w-16 h-5 rounded-full peer-checked:bg-primary/70 duration-200" />
-                  <div className="absolute -top-1.5 left-0 w-8 h-8 p-1.5 bg-primary rounded-full peer-checked:left-9 duration-200 shadow-3xl">
+               <div
+                  className="w-11 h-6 relative cursor-pointer mr-5"
+                  onClick={() => setActive((prev) => !prev)}
+               >
+                  <div
+                     className={`w-16 h-5 rounded-full duration-200 ${
+                        active ? "bg-primary/60" : "bg-primary/20"
+                     }`}
+                  />
+                  <div
+                     className={`absolute -top-1.5 w-8 h-8 p-1.5 bg-primary rounded-full duration-200 shadow-3xl ${
+                        active ? "left-9" : "left-0"
+                     }`}
+                  >
                      <div className="bg-white rounded-full w-full h-full" />
                   </div>
-               </label>
+               </div>
                <span
-                  onClick={() => setActive((prev) => !prev)}
-                  className={`font-semibold cursor-pointer ${
-                     !active ? "text-primary" : "text-white"
+                  className={`font-semibold ${
+                     active ? "text-primary" : "text-white"
                   }`}
                >
                   Yearly
                </span>
+            </div>
+            <div className="grid grid-cols-3 gap-8">
+               {packages.map(
+                  (
+                     {priceM, priceY, packageN, title, btn, Path, benefit},
+                     index
+                  ) => (
+                     <div
+                        key={index}
+                        className="py-10 px-8 bg-blue-950/[1] hover:shadow-md duration-300 rounded-sm relative"
+                     >
+                        <div className="absolute bottom-0 right-0">
+                           <img src="/images/packages-card-bg.svg" alt="" />
+                        </div>
+                        <div className="flex gap-4 justify-between items-center">
+                           <div className="text-5xl text-white font-bold">
+                              ${active ? priceY : priceM}
+                              <span className="text-lg text-gray-300 font-medium">
+                                 /{active ? "yr" : "mo"}
+                              </span>
+                           </div>
+                           <div className="text-lg text-white font-bold">
+                              {packageN}
+                           </div>
+                        </div>
+                        <h2 className="mb-7">{title}</h2>
+                        <div className="w-full cursor-pointer duration-300 rounded py-[11px] px-9 bg-primary hover:bg-primary/80 flex justify-center mb-8">
+                           <Link
+                              href={Path}
+                              className="text-white font-semibold leading-[1.5em]"
+                           >
+                              {btn}
+                           </Link>
+                        </div>
+                        <hr className="border border-gray-400/15 mb-8" />
+                        <div className="flex flex-col gap-3 mb-3">
+                           {benefit.map(({name, icon}, index) => (
+                              <div
+                                 key={index}
+                                 className="flex items-center gap-3"
+                              >
+                                 <div className="w-[18px] aspect-square bg-primary/15 rounded-full p-[3px]">
+                                    <img
+                                       src={
+                                          icon
+                                             ? "/images/icons8-check-mark-64.png"
+                                             : "/images/icons8-close-50.png"
+                                       }
+                                       alt=""
+                                    />
+                                 </div>
+                                 <h3 className="text-gray-300 leading-[1.5em]">
+                                    {name}
+                                 </h3>
+                              </div>
+                           ))}
+                        </div>
+                     </div>
+                  )
+               )}
             </div>
          </div>
       </section>
