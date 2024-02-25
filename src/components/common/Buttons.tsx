@@ -1,27 +1,30 @@
 import Link from "next/link";
 import React from "react";
 
-interface buttonsProps {
-   name: string;
-   path: string;
+interface ButtonsProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
    variant?: "small" | "large";
    color?: "blue" | "gray";
+   href: string;
 }
 
-function Buttons(props: buttonsProps) {
-   const {name, path, variant = "large", color = "blue"} = props;
+function Buttons(props: ButtonsProps) {
+   const {children, href, variant = "large", color = "blue", ...rest} = props;
+
+   const Comp = href ? Link : "button";
 
    return (
-      <Link
-         href={path}
-         className={`text-white font-semibold leading-[1.5em]  duration-300 rounded ${
+      // @ts-ignore
+      <Comp
+         {...(href ? {href} : {})}
+         {...rest}
+         className={`text-white font-semibold leading-[1.5em]  duration-300 rounded w-full text-center ${
             color === "blue"
                ? "bg-primary hover:bg-primary/80"
                : "bg-gray-500/10 hover:bg-gray-500/5"
          } ${variant === "large" ? "py-4 px-8" : "py-3 px-9"}`}
       >
-         {name}
-      </Link>
+         {children}
+      </Comp>
    );
 }
 

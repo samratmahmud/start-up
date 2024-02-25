@@ -1,3 +1,4 @@
+/* eslint-disable react/no-children-prop */
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import Buttons from "@/components/common/Buttons";
@@ -82,7 +83,9 @@ function Navbar() {
                   >
                      Sign In
                   </Link>
-                  <Buttons variant="small" name="Sign Up" path="/" />
+                  <div className="flex">
+                     <Buttons variant="small" children="Sign Up" href="#" />
+                  </div>
                   <div className="w-14 aspect-square flex items-center justify-center rounded-full cursor-pointer">
                      <img className="w-6" src="/images/sun.svg" alt="" />
                   </div>

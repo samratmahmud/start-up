@@ -1,3 +1,4 @@
+/* eslint-disable react/no-children-prop */
 /* eslint-disable @next/next/no-img-element */
 import Buttons from "@/components/common/Buttons";
 import React from "react";
@@ -23,8 +24,12 @@ function Header() {
                   business website, built-with Next 13.x and Tailwind CSS.
                </p>
                <div className="flex justify-center gap-4">
-                  <Buttons name="🔥 Get Pro" path="/" />
-                  <Buttons name="Star on GitHub" path="/" color="gray" />
+                  <div className="flex">
+                     <Buttons children="🔥 Get Pro" href="#" />
+                  </div>
+                  <div className="flex">
+                     <Buttons children="Star on GitHub" href="#" color="gray" />
+                  </div>
                </div>
             </div>
          </div>

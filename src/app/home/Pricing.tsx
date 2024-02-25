@@ -1,3 +1,4 @@
+/* eslint-disable react/no-children-prop */
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import Buttons from "@/components/common/Buttons";
@@ -183,13 +184,12 @@ function Pricing() {
                            </div>
                         </div>
                         <h2 className="mb-7 leading-[1.5em]">{title}</h2>
-                        <div className="w-full cursor-pointer duration-300 rounded py-3 px-9 bg-primary hover:bg-primary/80 flex justify-center mb-8">
-                           <Link
+                        <div className="flex mb-8">
+                           <Buttons
+                              children={btn}
+                              variant="small"
                               href={Path}
-                              className="text-white font-semibold leading-[1.5em]"
-                           >
-                              {btn}
-                           </Link>
+                           />
                         </div>
                         <hr className="border border-gray-400/15 mb-8" />
                         <div className="flex flex-col gap-3 mb-3">
