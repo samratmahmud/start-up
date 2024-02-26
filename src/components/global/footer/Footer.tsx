@@ -87,10 +87,16 @@ const socialItems = [
 
 function Footer() {
    return (
-      <section className="bg-gray-700 relative">
+      <section className="bg-blue-950/[1] relative z-0">
+         <span className="absolute bottom-1/4 left-0 -z-10">
+            <img src="/images/footer-bg-icon.svg" alt="" />
+         </span>
+         <span className="absolute top-12 right-0 -z-10">
+            <img src="/images/footer-bg-right.svg" alt="" />
+         </span>
          <div className="container pt-28">
-            <div className="grid grid-cols-12 gap-8">
-               <div className="col-span-5">
+            <div className="flex flex-wrap gap-8">
+               <div className="lg:w-[calc(42%-16px)]">
                   <div className="mb-8">
                      <img src="/images/logo.svg" alt="" />
                   </div>
@@ -109,9 +115,12 @@ function Footer() {
                      ))}
                   </div>
                </div>
-               <div className="grid grid-cols-7 gap-8 col-span-7 mb-16">
+               <div className="lg:w-[calc(58%-16px)] flex flex-wrap gap-8 mb-16">
                   {footerLink.map(({title, items}, index) => (
-                     <div key={index} className="last:col-span-3 col-span-2">
+                     <div
+                        key={index}
+                        className="w-[calc(27.2%-16px)] last:w-[calc(43%-16px)] outline"
+                     >
                         <h2 className="text-lg text-white font-bold mb-10">
                            {title}
                         </h2>
