@@ -2,7 +2,6 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import {usePathname} from "next/navigation";
 import SocialSite from "@/components/common/SocialSite";
 
 const footerLink = [
@@ -87,9 +86,6 @@ const socialItems = [
 ];
 
 function Footer() {
-   const [hovered, setHovered] = React.useState(false);
-   const pathname = usePathname();
-
    return (
       <section className="bg-gray-700 relative">
          <div className="container pt-28">
@@ -102,15 +98,13 @@ function Footer() {
                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                      Integer lobortis.
                   </p>
-                  <div className="flex gap-6">
+                  <div className="flex gap-4">
                      {socialItems.map(({icon, icon2, path}, index) => (
                         <SocialSite
                            icon={icon}
                            icon2={icon2}
                            path={path}
                            key={index}
-                           handelClick={() => setHovered(!hovered)}
-                           isActive={hovered}
                         />
                      ))}
                   </div>

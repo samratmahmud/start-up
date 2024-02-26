@@ -6,22 +6,24 @@ interface SocialSiteProps {
    icon: string;
    icon2: string;
    path: string;
-   isActive?: boolean;
-   handelClick?: () => void;
 }
 
 function SocialSite(props: SocialSiteProps) {
-   const {icon, icon2, path, isActive, handelClick} = props;
+   const {icon, icon2, path} = props;
+   const [show, setShow] = React.useState(false);
+
    return (
-      <div onMouseEnter={handelClick} onMouseLeave={handelClick}>
-         <Link href={path}>
-            <img
-               className={`w-5 opacity-60`}
-               src={!isActive ? icon2 : icon}
-               alt=""
-            />
-         </Link>
-      </div>
+      <Link
+         href={path}
+         onMouseEnter={() => setShow(true)}
+         onMouseLeave={() => setShow(false)}
+      >
+         <img
+            className={`w-7 p-[5px] ${show ? "opacity-100" : "opacity-60"}`}
+            src={show ? icon2 : icon}
+            alt=""
+         />
+      </Link>
    );
 }
 

@@ -59,7 +59,7 @@ function Navbar() {
                   <Link href="/">
                      <img className="h-8" src="/images/logo.svg" alt="" />
                   </Link>
-                  <div className="flex gap-12">
+                  <div className="lg:flex hidden xl:gap-12 gap-10">
                      {navLink.map(({name, path}, index) => (
                         <Link
                            key={index}
@@ -77,17 +77,22 @@ function Navbar() {
                   </div>
                </div>
                <div className="flex items-center">
-                  <Link
-                     href="/"
-                     className="hover:text-gray-400 text-white font-bold leading-[1.5em] duration-300 px-7 py-3"
-                  >
-                     Sign In
-                  </Link>
-                  <div className="flex">
-                     <Buttons variant="small" children="Sign Up" href="#" />
+                  <div className="md:flex hidden items-center">
+                     <Link
+                        href="/"
+                        className="hover:text-gray-400 text-white font-bold leading-[1.5em] duration-300 px-7 py-3"
+                     >
+                        Sign In
+                     </Link>
+                     <div className="flex">
+                        <Buttons variant="small" children="Sign Up" href="#" />
+                     </div>
                   </div>
                   <div className="w-14 aspect-square flex items-center justify-center rounded-full cursor-pointer">
                      <img className="w-6" src="/images/sun.svg" alt="" />
+                  </div>
+                  <div className="w-14 h-11 py-1.5 px-3 lg:hidden">
+                     <img src="/images/icons8-menu-50.png" alt="" />
                   </div>
                </div>
             </div>

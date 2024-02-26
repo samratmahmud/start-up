@@ -13,15 +13,15 @@ export default function Home() {
    return (
       <main className="bg-gray-950/[1] pb-1">
          <Header />
-         <Features />
-         <VideoBar />
-         <BrandGroup />
-         <BusinessSites />
-         <Support />
-         <Feadback />
-         <Pricing />
-         <Blogs />
-         <Contact />
+         {/* <Features /> */}
+         {/* <VideoBar /> */}
+         {/* <BrandGroup /> */}
+         {/* <BusinessSites /> */}
+         {/* <Support /> */}
+         {/* <Feadback /> */}
+         {/* <Pricing /> */}
+         {/* <Blogs /> */}
+         {/* <Contact /> */}
       </main>
    );
 }

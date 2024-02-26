@@ -15,3 +15,28 @@ body {
 html {
    scroll-behavior: smooth;
 }
+
+/* Mobile Responsive */
+@media screen and (max-width: 1200px) {
+   .text-lg {
+      @apply text-[18px];
+   }
+}
+@media screen and (max-width: 1024px) {
+   .text-lg {
+      @apply text-[18px];
+   }
+}
+@media screen and (max-width: 768px) {
+   .text-lg {
+      @apply text-[16px];
+   }
+   .text-4xl {
+      @apply text-[36px];
+   }
+}
+@media screen and (max-width: 575px) {
+   .text-4xl {
+      @apply text-[30px];
+   }
+}
