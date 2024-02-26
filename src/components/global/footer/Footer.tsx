@@ -95,8 +95,8 @@ function Footer() {
             <img src="/images/footer-bg-right.svg" alt="" />
          </span>
          <div className="container pt-28">
-            <div className="flex flex-wrap gap-8">
-               <div className="lg:w-[calc(42%-16px)]">
+            <div className="grid grid-cols-12 gap-x-8 gap-y-12 mb-16">
+               <div className="lg:col-span-5 md:col-span-6 col-span-12">
                   <div className="mb-8">
                      <img src="/images/logo.svg" alt="" />
                   </div>
@@ -115,29 +115,27 @@ function Footer() {
                      ))}
                   </div>
                </div>
-               <div className="lg:w-[calc(58%-16px)] flex flex-wrap gap-8 mb-16">
-                  {footerLink.map(({title, items}, index) => (
-                     <div
-                        key={index}
-                        className="w-[calc(27.2%-16px)] last:w-[calc(43%-16px)] outline"
-                     >
-                        <h2 className="text-lg text-white font-bold mb-10">
-                           {title}
-                        </h2>
-                        <div className="flex flex-col gap-4">
-                           {items.map(({name, path}, index) => (
-                              <Link
-                                 href={path}
-                                 key={index}
-                                 className="hover:text-primary duration-300"
-                              >
-                                 {name}
-                              </Link>
-                           ))}
-                        </div>
+               {footerLink.map(({title, items}, index) => (
+                  <div
+                     key={index}
+                     className="lg:col-span-2 lg:last:col-span-3 sm:col-span-6 col-span-12"
+                  >
+                     <h2 className="text-[20px] text-white font-bold mb-10">
+                        {title}
+                     </h2>
+                     <div className="flex flex-col gap-4">
+                        {items.map(({name, path}, index) => (
+                           <Link
+                              href={path}
+                              key={index}
+                              className="hover:text-primary duration-300"
+                           >
+                              {name}
+                           </Link>
+                        ))}
                      </div>
-                  ))}
-               </div>
+                  </div>
+               ))}
             </div>
             <hr className="border border-gray-400/15" />
             <div className="text-center text-white leading-[1.5em] py-8">
