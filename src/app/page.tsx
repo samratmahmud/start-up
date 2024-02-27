@@ -17,11 +17,11 @@ export default function Home() {
          <VideoBar />
          <BrandGroup />
          <BusinessSites />
-         {/* <Support /> */}
-         {/* <Feadback /> */}
-         {/* <Pricing /> */}
-         {/* <Blogs /> */}
-         {/* <Contact /> */}
+         <Support />
+         <Feadback />
+         <Pricing />
+         <Blogs />
+         <Contact />
       </main>
    );
 }

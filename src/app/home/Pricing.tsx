@@ -119,8 +119,8 @@ function Pricing() {
          <span className="absolute bottom-0 left-0 -z-10">
             <img src="/images/pricing-bg-icon.svg" alt="" />
          </span>
-         <div className="container py-28">
-            <div className="mb-[100px]">
+         <div className="container xl:py-28 lg:py-24 md:py-20 py-16">
+            <div className="lg:mb-[100px] md:mb-20 mb-16">
                <Title
                   title="Simple and Affordable Pricing"
                   describtion="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
@@ -159,7 +159,7 @@ function Pricing() {
                   Yearly
                </span>
             </div>
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-8 gap-6">
                {packages.map(
                   (
                      {priceM, priceY, packageN, title, btn, Path, benefit},
@@ -167,7 +167,7 @@ function Pricing() {
                   ) => (
                      <div
                         key={index}
-                        className="py-10 px-8 bg-blue-950/[1] hover:shadow-md duration-300 rounded-sm relative"
+                        className="md:py-10 md:px-8 p-7 bg-blue-950/[1] hover:shadow-md duration-300 rounded-sm relative"
                      >
                         <div className="absolute bottom-0 right-0">
                            <img src="/images/packages-card-bg.svg" alt="" />
@@ -183,15 +183,17 @@ function Pricing() {
                               {packageN}
                            </div>
                         </div>
-                        <h2 className="mb-7 leading-[1.5em]">{title}</h2>
-                        <div className="flex mb-8">
+                        <h2 className="md:mb-7 mb-5 leading-[1.5em]">
+                           {title}
+                        </h2>
+                        <div className="flex md:mb-8 mb-6">
                            <Buttons
                               children={btn}
                               variant="small"
                               href={Path}
                            />
                         </div>
-                        <hr className="border border-gray-400/15 mb-8" />
+                        <hr className="border border-gray-400/15 md:mb-8 mb-6" />
                         <div className="flex flex-col gap-3 mb-3">
                            {benefit.map(({name, icon}, index) => (
                               <div

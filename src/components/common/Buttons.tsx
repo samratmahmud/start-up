@@ -21,7 +21,7 @@ function Buttons(props: ButtonsProps) {
             color === "blue"
                ? "bg-primary hover:bg-primary/80"
                : "bg-gray-500/10 hover:bg-gray-500/5"
-         } ${variant === "large" ? "py-4 px-8" : "py-3 px-9"}`}
+         } ${variant === "large" ? "py-4 px-8" : "md:py-3 py-2.5 px-9"}`}
       >
          {children}
       </Comp>

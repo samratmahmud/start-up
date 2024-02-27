@@ -9,7 +9,7 @@ function VideoBar() {
          className="bg-cover bg-no-repeat bg-center bg-gray-950"
          style={{backgroundImage: "url(/images/brand-bg.svg)"}}
       >
-         <div className="container lg:py-28 md:py-24 py-16">
+         <div className="container xl:py-28 lg:py-24 md:py-20 py-16">
             <div className="lg:mb-20 md:mb-16 mb-14">
                <Title
                   title="We are ready to help"

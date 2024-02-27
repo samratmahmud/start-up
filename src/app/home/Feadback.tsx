@@ -36,21 +36,24 @@ function Feadback() {
          <span className="absolute top-0 right-0 -z-10">
             <img src="/images/right-bg-arrow.svg" alt="" />
          </span>
-         <span className="absolute bottom-0 left-0">
+         <span className="absolute bottom-3 left-0 -z-10">
             <img src="/images/feadback-bg-icon.svg" alt="" />
          </span>
-         <div className="container py-28">
-            <div className="mb-[100px]">
+         <div className="container xl:py-28 lg:py-24 md:py-20 py-16">
+            <div className="lg:mb-[100px] md:mb-20 mb-16">
                <Title
                   title="What Our Users Says"
                   describtion="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form"
                />
             </div>
-            <div className="flex gap-8">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-8 gap-6">
                {feadbackCards.map(
                   ({content, thumbnail, name, describtion}, index) => (
-                     <div key={index} className="p-8 bg-gray-600 rounded">
-                        <div className="flex gap-1 mb-5">
+                     <div
+                        key={index}
+                        className="sm:p-8 p-7 bg-gray-600 rounded"
+                     >
+                        <div className="flex gap-1 sm:mb-5 mb-4">
                            {[...Array(5)].map((_, i) => (
                               <img
                                  key={i}
@@ -60,14 +63,16 @@ function Feadback() {
                               />
                            ))}
                         </div>
-                        <p className="text-white font-normal mb-8">{content}</p>
-                        <hr className="border-gray-500/10 border mb-8" />
-                        <div className="flex items-center gap-4">
+                        <p className="text-white font-normal md:mb-8 mb-6">
+                           {content}
+                        </p>
+                        <hr className="border-gray-500/10 border md:mb-8 mb-6" />
+                        <div className="flex items-center md:gap-4 gap-3">
                            <div>
                               <img src={thumbnail} alt="" />
                            </div>
                            <div>
-                              <h3 className="text-base text-white leading-[1.56em] mb-1">
+                              <h3 className="text-base text-white leading-[1.56em] md:mb-1 mb-0.5">
                                  {name}
                               </h3>
                               <p className="text-sm leading-[1.43em]">

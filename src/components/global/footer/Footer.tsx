@@ -100,7 +100,7 @@ function Footer() {
                   <div className="md:mb-8 mb-6">
                      <img src="/images/logo.svg" alt="" />
                   </div>
-                  <p className="max-w-[350px] md:mb-9 mb-7">
+                  <p className="max-w-[350px] md:mb-9 mb-7 pr-5 md:pr-0">
                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                      Integer lobortis.
                   </p>

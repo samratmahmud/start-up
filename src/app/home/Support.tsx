@@ -22,9 +22,9 @@ const supportItems = [
 function Support() {
    return (
       <section>
-         <div className="container mb-28">
-            <div className="grid grid-cols-2 items-center gap-8">
-               <div>
+         <div className="container xl:pb-28 lg:pb-24 md:pb-20 pb-16">
+            <div className="grid lg:grid-cols-2 items-center gap-12">
+               <div className="flex justify-center lg:justify-start">
                   <img src="/images/about-image-2-dark.svg" alt="" />
                </div>
                <div className="flex flex-col gap-9">

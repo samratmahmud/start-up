@@ -9,8 +9,8 @@ function Contact() {
    const [focus, setFocus] = React.useState(false);
    return (
       <section>
-         <div className="container py-28">
-            <div className="grid grid-cols-3 gap-8">
+         <div className="container xl:py-28 lg:py-24 md:py-20 py-16">
+            <div className="grid lg:grid-cols-3 gap-8">
                <div className="bg-gray-300/10 p-[55px] col-span-2 rounded-sm">
                   <h2 className="text-2xl text-white font-bold leading-[1.2em] mb-3">
                      Need Help? Open a Ticket

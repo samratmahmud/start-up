@@ -10,7 +10,7 @@
 }
 
 body {
-   @apply font-inter text-md text-gray-300/[1] font-medium leading-[1.625];
+   @apply font-inter md:text-md text-sm text-gray-300/[1] font-medium leading-[1.625];
 }
 html {
    scroll-behavior: smooth;
@@ -36,6 +36,9 @@ html {
    }
    .text-4xl {
       @apply text-[36px];
+   }
+   .text-5xl {
+      @apply text-[26px];
    }
    .text-base {
       @apply text-[16px];

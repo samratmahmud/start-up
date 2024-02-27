@@ -48,14 +48,14 @@ const blogsCrads = [
 function Blogs() {
    return (
       <section className="bg-blue-950/[1]">
-         <div className="container py-28">
-            <div className="mb-[100px]">
+         <div className="container xl:py-28 lg:py-24 md:py-20 py-16">
+            <div className="lg:mb-[100px] md:mb-20 mb-16">
                <Title
                   title="Our Latest Blogs"
                   describtion="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
                />
             </div>
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 xl:gap-8 gap-6">
                {blogsCrads.map(
                   (
                      {
@@ -72,28 +72,28 @@ function Blogs() {
                   ) => (
                      <div key={index} className="">
                         <Link href={href} className="relative" target="_blank">
-                           <span className="absolute top-[9%] right-[6%] text-sm text-white font-semibold py-2 px-4 bg-primary rounded-full leading-[1.43em]">
+                           <span className="absolute top-[9%] right-[6%] text-sm text-white font-semibold sm:py-2 py-1.5 px-4 bg-primary rounded-full leading-[1.43em]">
                               {mood}
                            </span>
                            <img className="w-full" src={thumbnail} alt="" />
                         </Link>
-                        <div className="bg-gray-300/10 p-8">
+                        <div className="bg-gray-300/10 md:p-8 p-7">
                            <Link
                               href={href}
                               target="_blank"
-                              className="text-xl font-bold text-white hover:text-primary duration-300 leading-[1.34em] block"
+                              className="text-xl font-bold text-white hover:text-primary duration-300 leading-[1.34em] block md:mb-4 mb-3"
                            >
                               {title}
                            </Link>
-                           <p className="leading-[1.5em] mb-6 mt-4">
+                           <p className="leading-[1.5em] md:mb-6 mb-4">
                               {describtion}
                            </p>
-                           <hr className="border border-gray-400/15 mb-6" />
-                           <div className="flex gap-5 items-center">
-                              <div className="flex items-center gap-4">
+                           <hr className="border border-gray-400/15 md:mb-6 mb-4" />
+                           <div className="flex xl:gap-5 gap-3 items-center">
+                              <div className="flex items-center gap-3">
                                  <img src={profileP} alt="" />
                                  <div>
-                                    <h3 className="text-sm font-medium text-white mb-1 leading-[1.43em]">
+                                    <h3 className="text-sm font-medium text-white sm:mb-1 mb-0.5 leading-[1.43em]">
                                        {name}
                                     </h3>
                                     <p className="text-xs leading-[1.34em]">

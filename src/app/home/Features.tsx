@@ -44,7 +44,7 @@ const featuresCards = [
 function Features() {
    return (
       <section>
-         <div className="bg-gray-950 lg:py-28 md:py-24 py-16">
+         <div className="bg-gray-950 xl:py-28 lg:py-24 md:py-20 py-16">
             <div className="container">
                <div className="lg:mb-[100px] md:mb-20 mb-16">
                   <Title
