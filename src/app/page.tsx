@@ -11,12 +11,12 @@ import Contact from "./home/Contact";
 
 export default function Home() {
    return (
-      <main className="bg-gray-950/[1] pb-1">
+      <main className="bg-gray-950/[1]">
          <Header />
-         {/* <Features /> */}
-         {/* <VideoBar /> */}
-         {/* <BrandGroup /> */}
-         {/* <BusinessSites /> */}
+         <Features />
+         <VideoBar />
+         <BrandGroup />
+         <BusinessSites />
          {/* <Support /> */}
          {/* <Feadback /> */}
          {/* <Pricing /> */}

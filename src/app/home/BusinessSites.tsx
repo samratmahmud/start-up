@@ -25,7 +25,7 @@ const sites = [
 function BusinessSites() {
    return (
       <section>
-         <div className="container mb-28">
+         <div className="container pb-28">
             <div className="flex gap-8 items-center justify-between mb-28">
                <div className="w-[570px]">
                   <h2 className="text-3xl text-white/90 font-bold leading-[1.25] mb-4">

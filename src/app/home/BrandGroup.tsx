@@ -33,8 +33,8 @@ const brandImages = [
 function BrandGroup() {
    return (
       <section>
-         <div className="container pt-16 pb-28">
-            <div className="md:flex md:flex-wrap grid grid-cols-2 xl:grid xl:grid-cols-6 items-center justify-center bg-blue-950 2xl:py-[60px] 2xl:px-16 md:py-10 md:px-[50px] py-8 sm:px-10 px-8 xl:p-[50px] rounded-sm">
+         <div className="container lg:pt-16 md:pt-14 pt-12 lg:pb-28 md:pb-24 pb-16">
+            <div className="md:flex md:flex-wrap grid grid-cols-2 xl:grid xl:grid-cols-6 items-center justify-center bg-blue-950 2xl:py-[60px] md:py-10 py-8 2xl:px-16 md:px-[50px] sm:px-10 px-7 xl:p-[50px] rounded-sm">
                {brandImages.map(({image, path}, index) => (
                   <Link
                      href={path}

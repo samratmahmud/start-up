@@ -88,23 +88,23 @@ const socialItems = [
 function Footer() {
    return (
       <section className="bg-blue-950/[1] relative z-0">
-         <span className="absolute bottom-1/4 left-0 -z-10">
+         <span className="absolute lg:bottom-28 md:bottom-24 sm:bottom-20 bottom-16 left-0 -z-10">
             <img src="/images/footer-bg-icon.svg" alt="" />
          </span>
-         <span className="absolute top-12 right-0 -z-10">
+         <span className="absolute md:top-12 top-8 right-0 -z-10">
             <img src="/images/footer-bg-right.svg" alt="" />
          </span>
-         <div className="container pt-28">
-            <div className="grid grid-cols-12 gap-x-8 gap-y-12 mb-16">
+         <div className="container xl:pt-28 lg:pt-24 md:pt-20 pt-16">
+            <div className="grid grid-cols-12 md:gap-x-8 gap-x-6 lg:gap-y-12 md:gap-y-10 gap-y-8 mb-16">
                <div className="lg:col-span-5 md:col-span-6 col-span-12">
-                  <div className="mb-8">
+                  <div className="md:mb-8 mb-6">
                      <img src="/images/logo.svg" alt="" />
                   </div>
-                  <p className="max-w-[350px] mb-9">
+                  <p className="max-w-[350px] md:mb-9 mb-7">
                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                      Integer lobortis.
                   </p>
-                  <div className="flex gap-4">
+                  <div className="flex md:gap-4 gap-3">
                      {socialItems.map(({icon, icon2, path}, index) => (
                         <SocialSite
                            icon={icon}
@@ -120,10 +120,10 @@ function Footer() {
                      key={index}
                      className="lg:col-span-2 lg:last:col-span-3 sm:col-span-6 col-span-12"
                   >
-                     <h2 className="text-[20px] text-white font-bold mb-10">
+                     <h2 className="text-[20px] text-white font-bold lg:mb-10 md:mb-8 mb-6">
                         {title}
                      </h2>
-                     <div className="flex flex-col gap-4">
+                     <div className="flex flex-col md:gap-4 gap-3">
                         {items.map(({name, path}, index) => (
                            <Link
                               href={path}
@@ -138,7 +138,7 @@ function Footer() {
                ))}
             </div>
             <hr className="border border-gray-400/15" />
-            <div className="text-center text-white leading-[1.5em] py-8">
+            <div className="lg:text-md md:text-sm text-xs text-center text-white leading-[1.5em] lg:py-8 md:py-7 py-5">
                Template by <Link href="#">UIdeck</Link> and{" "}
                <Link href="#">Next.js Templates</Link>
             </div>

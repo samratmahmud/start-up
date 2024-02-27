@@ -91,7 +91,7 @@ function Navbar() {
                   <div className="md:w-14 w-12 aspect-square flex items-center justify-center rounded-full cursor-pointer">
                      <img className="w-6" src="/images/sun.svg" alt="" />
                   </div>
-                  <div className="w-14 h-11 py-1.5 px-3 lg:hidden">
+                  <div className="w-14 h-11 py-1.5 px-3 lg:hidden cursor-pointer">
                      <img src="/images/icons8-menu-50.png" alt="" />
                   </div>
                </div>

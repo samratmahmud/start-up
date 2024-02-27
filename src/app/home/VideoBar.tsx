@@ -9,8 +9,8 @@ function VideoBar() {
          className="bg-cover bg-no-repeat bg-center bg-gray-950"
          style={{backgroundImage: "url(/images/brand-bg.svg)"}}
       >
-         <div className="container py-28">
-            <div className="mb-20">
+         <div className="container lg:py-28 md:py-24 py-16">
+            <div className="lg:mb-20 md:mb-16 mb-14">
                <Title
                   title="We are ready to help"
                   describtion="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
@@ -24,7 +24,7 @@ function VideoBar() {
                />
                <Link
                   href="https://www.youtube.com/"
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/70 hover:bg-white duration-300 w-[70px] h-[70px] rounded-full p-6"
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/70 hover:bg-white duration-300 md:w-[70px] w-14 aspect-square rounded-full md:p-6 p-4"
                   target="_blank"
                >
                   <img src="/images/icons8-play-48.png" alt="" />

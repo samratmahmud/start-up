@@ -44,22 +44,22 @@ const featuresCards = [
 function Features() {
    return (
       <section>
-         <div className="bg-gray-950 py-28">
+         <div className="bg-gray-950 lg:py-28 md:py-24 py-16">
             <div className="container">
-               <div className="mb-[100px]">
+               <div className="lg:mb-[100px] md:mb-20 mb-16">
                   <Title
                      title="Main Features"
                      describtion="There are many variations of passages of Lorem Ipsum available
                   but the majority have suffered alteration in some form."
                   />
                </div>
-               <div className="grid grid-cols-3 gap-x-8 gap-y-14">
+               <div className="grid lg:grid-cols-3 md:grid-cols-2 lg:gap-x-8 gap-x-7 lg:gap-y-14 md:gap-y-12 gap-y-10">
                   {featuresCards.map(({icon, title, describtion}, index) => (
                      <div key={index} className="group">
-                        <div className="w-[70px] aspect-square p-4 bg-blue-200/15 group-hover:bg-blue-200/40 duration-300 rounded-md mb-10">
+                        <div className="md:w-[70px] w-14 aspect-square md:p-4 p-3 bg-blue-200/15 group-hover:bg-blue-200/40 duration-300 rounded-md md:mb-10 mb-7">
                            <img src={icon} alt="" />
                         </div>
-                        <h3 className="text-xl leading-[1.334em] font-bold text-white/90 mb-5">
+                        <h3 className="text-xl leading-[1.334em] font-bold text-white/90 md:mb-5 mb-4">
                            {title}
                         </h3>
                         <p className="pr-2.5">{describtion}</p>
