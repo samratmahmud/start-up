@@ -47,7 +47,7 @@ const blogsCrads = [
 
 function Blogs() {
    return (
-      <section className="bg-blue-950/[1]">
+      <section id="blog" className="bg-blue-950/[1]">
          <div className="container xl:py-28 lg:py-24 md:py-20 py-16">
             <div className="lg:mb-[100px] md:mb-20 mb-16">
                <Title

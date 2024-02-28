@@ -8,6 +8,7 @@ import NavLink from "./NavLink";
 
 function Navbar() {
    const [visible, setVisible] = useState(false);
+   const [open, setOpen] = useState(false);
 
    useEffect(() => {
       const handelScroll = () => {
@@ -33,7 +34,7 @@ function Navbar() {
       >
          <div className="container">
             <div className="flex items-center justify-between">
-               <div className="flex items-center gap-16">
+               <div className="flex items-center xl:gap-16 gap-12">
                   <Link href="/">
                      <img className="h-8" src="/images/logo.svg" alt="" />
                   </Link>
@@ -56,8 +57,27 @@ function Navbar() {
                   <div className="md:w-14 w-12 aspect-square flex items-center justify-center rounded-full cursor-pointer">
                      <img className="w-6" src="/images/sun.svg" alt="" />
                   </div>
-                  <div className="w-14 h-11 py-1.5 px-3 lg:hidden cursor-pointer">
-                     <img src="/images/icons8-menu-50.png" alt="" />
+                  <div className="lg:hidden relative z-0">
+                     <div
+                        onClick={() => setOpen((prev) => !prev)}
+                        className="w-14 h-11 py-1.5 px-3 cursor-pointer"
+                     >
+                        <img
+                           src={`${
+                              open
+                                 ? "/images/icons8-menu-50.png"
+                                 : "/images/icons8-close-50 (1).png"
+                           }`}
+                           alt=""
+                        />
+                     </div>
+                     <div
+                        className={`absolute top-[54px] -right-3.5 ${
+                           !open ? "block" : "hidden"
+                        }`}
+                     >
+                        <NavLink />
+                     </div>
                   </div>
                </div>
             </div>

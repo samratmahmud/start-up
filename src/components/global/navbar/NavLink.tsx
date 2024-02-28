@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import React, {useState} from "react";
+import DrawerLinkProps from "./DrawerLinkProps";
+
 const navLink = [
    {
       name: "Home",
@@ -62,47 +64,16 @@ function NavLink() {
    const [tab, setTab] = useState(0);
 
    return (
-      <div className="flex xl:gap-12 gap-10">
+      <div className="flex lg:flex-row flex-col xl:gap-12 lg:gap-10 bg-gray-700 lg:bg-transparent min-w-[230px] border lg:border-0 border-gray-500/20 rounded p-4 lg:p-0 scroll-container">
          {navLink.map(({name, path, items}, index) => (
-            <div key={index} className="group relative z-0">
-               <Link
-                  href={path}
-                  onClick={() => setTab(index)}
-                  className="flex items-center group"
-               >
-                  <p
-                     className={`duration-300 leading-[1.5] py-3 ${
-                        tab === index
-                           ? "text-white"
-                           : "text-gray-500/[0.7] group-hover:text-white"
-                     }`}
-                  >
-                     {name}
-                  </p>
-                  {items && (
-                     <img
-                        width={14}
-                        height={14}
-                        className="opacity-60 group-hover:opacity-100 duration-200 -rotate-90 group-hover:rotate-90 ml-3.5"
-                        src="/images/icons8-collapse-arrow-48.png"
-                        alt=""
-                     />
-                  )}
-               </Link>
-               {items && (
-                  <div className="absolute top-[999999px] left-0 group-hover:top-12 bg-gray-600/[1] flex flex-col min-w-[250px] rounded p-4 shadow-lg">
-                     {items.map(({nameL, href}, index) => (
-                        <Link
-                           key={index}
-                           href={href}
-                           className="px-3 py-2.5 whitespace-nowrap text-gray-500/70 hover:text-white"
-                        >
-                           {nameL}
-                        </Link>
-                     ))}
-                  </div>
-               )}
-            </div>
+            <DrawerLinkProps
+               key={index}
+               name={name}
+               path={path}
+               items={items}
+               isActive={tab === index}
+               handelClick={() => setTab(index)}
+            />
          ))}
       </div>
    );
