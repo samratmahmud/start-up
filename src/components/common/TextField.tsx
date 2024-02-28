@@ -13,7 +13,7 @@ function TextField(propr: TextFieldProps) {
       <label className="flex flex-col w-full">
          {label && (
             <p
-               className={`mb-3 text-sm font-medium ${
+               className={`sm:mb-3 mb-1.5 text-sm font-medium ${
                   !focus ? "text-white" : "text-primary"
                }`}
             >

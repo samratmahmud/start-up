@@ -18,18 +18,22 @@ html {
 
 /* Mobile Responsive */
 @media screen and (max-width: 1200px) {
-}
-@media screen and (max-width: 1024px) {
+   .text-2xl {
+      @apply text-[28px];
+   }
    .text-3xl {
       @apply text-[36px];
    }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
    .text-lg {
       @apply text-[16px];
    }
    .text-xl {
       @apply text-[20px];
+   }
+   .text-2xl {
+      @apply text-[26px];
    }
    .text-3xl {
       @apply text-[30px];
@@ -44,7 +48,15 @@ html {
       @apply text-[16px];
    }
 }
+@media screen and (max-width: 768px) {
+   .text-4xl {
+      @apply text-[32px];
+   }
+}
 @media screen and (max-width: 575px) {
+   .text-2xl {
+      @apply text-[24px];
+   }
    .text-4xl {
       @apply text-[30px];
    }

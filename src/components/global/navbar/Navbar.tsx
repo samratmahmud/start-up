@@ -25,6 +25,16 @@ const navLink = [
    {
       name: "Pages",
       path: "/",
+      items: [
+         {
+            nameL: "About Page",
+            href: "#",
+         },
+         {
+            nameL: "Contact Page",
+            href: "#",
+         },
+      ],
    },
 ];
 
@@ -49,6 +59,7 @@ function Navbar() {
 
    return (
       <nav
+         id="top"
          className={`fixed left-0 right-0 top-0 z-[1020] duration-300 ${
             visible ? "bg-blue-950/70 backdrop-blur-sm py-2 shadow-sm" : "py-5"
          }`}
@@ -60,19 +71,42 @@ function Navbar() {
                      <img className="h-8" src="/images/logo.svg" alt="" />
                   </Link>
                   <div className="lg:flex hidden xl:gap-12 gap-10">
-                     {navLink.map(({name, path}, index) => (
-                        <Link
-                           key={index}
-                           href={path}
-                           onClick={() => setTab(index)}
-                           className={`duration-300 leading-[1.5] ${
-                              tab === index
-                                 ? "text-white/90"
-                                 : "text-gray-400 hover:text-white/90"
-                           }`}
-                        >
-                           {name}
-                        </Link>
+                     {navLink.map(({name, path, items}, index) => (
+                        <div key={index} className="group relative z-0">
+                           <Link
+                              href={path}
+                              onClick={() => setTab(index)}
+                              className="flex items-center gap-3.5 group"
+                           >
+                              <p
+                                 className={`duration-300 leading-[1.5] ${
+                                    tab === index
+                                       ? "text-white/90"
+                                       : "text-gray-400 hover:text-white/90"
+                                 }`}
+                              >
+                                 {name}
+                              </p>
+                              {items && (
+                                 <img
+                                    width={14}
+                                    height={14}
+                                    className="opacity-60 group-hover:opacity-100 duration-200 group-hover:rotate-180"
+                                    src="/images/icons8-collapse-arrow-48.png"
+                                    alt=""
+                                 />
+                              )}
+                           </Link>
+                           {items && (
+                              <div className="absolute top-[9999999px] left-0 group-hover:top-12 bg-gray-700">
+                                 {items.map(({nameL, href}, index) => (
+                                    <Link key={index} href={href}>
+                                       {nameL}
+                                    </Link>
+                                 ))}
+                              </div>
+                           )}
+                        </div>
                      ))}
                   </div>
                </div>

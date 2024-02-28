@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import SocialSite from "@/components/common/SocialSite";
 
 const footerLink = [
@@ -86,6 +86,23 @@ const socialItems = [
 ];
 
 function Footer() {
+   const [visible, setVisible] = useState(false);
+
+   useEffect(() => {
+      const handelScroll = () => {
+         if (window.scrollY >= 150) {
+            setVisible(true);
+         } else {
+            setVisible(false);
+         }
+      };
+      handelScroll();
+
+      window.addEventListener("scroll", () => {
+         handelScroll();
+      });
+   });
+
    return (
       <section className="bg-blue-950/[1] relative z-0">
          <span className="absolute lg:bottom-28 md:bottom-24 sm:bottom-20 bottom-16 left-0 -z-10">
@@ -143,6 +160,14 @@ function Footer() {
                <Link href="#">Next.js Templates</Link>
             </div>
          </div>
+         <Link
+            href="#top"
+            className={`fixed bottom-8 right-6 w-10 p-2 cursor-pointer aspect-square rounded bg-primary hover:bg-primary/80 duration-300 ${
+               visible ? "opacity-100" : "opacity-0"
+            }`}
+         >
+            <img src="/images/icons8-collapse-arrow-48.png" alt="" />
+         </Link>
       </section>
    );
 }
