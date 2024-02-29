@@ -166,7 +166,11 @@ function Footer() {
                visible ? "opacity-100" : "opacity-0"
             }`}
          >
-            <img src="/images/icons8-collapse-arrow-48.png" alt="" />
+            <img
+               className="rotate-90"
+               src="/images/icons8-arrow-50.png"
+               alt=""
+            />
          </Link>
       </section>
    );

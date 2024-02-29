@@ -8,7 +8,7 @@ import NavLink from "./NavLink";
 
 function Navbar() {
    const [visible, setVisible] = useState(false);
-   const [open, setOpen] = useState(false);
+   const [open, setOpen] = useState(true);
 
    useEffect(() => {
       const handelScroll = () => {
@@ -28,7 +28,7 @@ function Navbar() {
    return (
       <nav
          id="top"
-         className={`fixed left-0 right-0 top-0 z-[1020] duration-300 ${
+         className={`fixed left-0 right-0 top-0 z-[1020] duration-200 ${
             visible ? "bg-blue-950/70 backdrop-blur-sm py-2 shadow-sm" : "py-5"
          }`}
       >
